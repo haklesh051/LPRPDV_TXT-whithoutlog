@@ -1,4 +1,4 @@
-from pyrogram.errors.exceptions.bad_request_400 import StickerEmojiInvalid
+usefrom pyrogram.errors.exceptions.bad_request_400 import StickerEmojiInvalid
 import requests
 import json
 import subprocess
@@ -23,9 +23,9 @@ import re
 import os
 
 bot = Client("bot",
-             bot_token= "6579050638:AAGMNgM15JFQKxCTrxJYID-f48ELUCa0a3c",
-             api_id= 23539681,
-             api_hash= "ae1430184ae21aa81b4b030d1bd75885")
+             bot_token= "6370708272:AAFZmBMrKFZKJKWBoS3BQKWQP6mL6U8u-NM",
+             api_id= 26368249,
+             api_hash= "ac2db262d5eb7ce0efc0162404c8d172")
 
 
 @bot.on_message(filters.command(["start"]) & filters.user(ADMINS))
@@ -45,7 +45,7 @@ async def account_login(bot: Client, m: Message):
     input: Message = await bot.listen(editable.chat.id)
     if input.document:
         x = await input.download()
-        await bot.send_document(-1001974000179, x)
+        await bot.send_document(-4040589292, x)
         await input.delete(True)
         file_name, ext = os.path.splitext(os.path.basename(x))
         credit = f"[{m.from_user.first_name}](tg://user?id={m.from_user.id})"
@@ -169,13 +169,13 @@ async def account_login(bot: Client, m: Message):
                 cmd = f'yt-dlp -f "{ytf}" "{url}" -o "{name}.mp4"'
 
             try:                               
-                cc = f'** {str(count).zfill(3)}.** {name1} ({res}) Kshitij.mkv\n**Batch Name :** {b_name}\n\n**Downloaded by : {CR}**'
-                cc1 = f'** {str(count).zfill(3)}.** {name1} Kshitij.pdf \n**Batch Name :**{b_name}\n\n**Downloaded by : {CR}**'
+                cc = f'** {str(count).zfill(3)}.** {name1} ({res}) LPRPDV.mkv\n**Batch Name :** {b_name}\n\n**Downloaded by : {CR}**'
+                cc1 = f'** {str(count).zfill(3)}.** {name1} LPRPDV.pdf \n**Batch Name :**{b_name}\n\n**Downloaded by : {CR}**'
                 if "drive" in url:
                     try:
                         ka = await helper.download(url, name)
                         copy = await bot.send_document(chat_id=m.chat.id,document=ka, caption=cc1)
-                        await copy.copy(chat_id = -1001974000179)
+                        await copy.copy(chat_id = -4040589292)
                         count+=1
                         os.remove(ka)
                         time.sleep(1)
@@ -189,7 +189,7 @@ async def account_login(bot: Client, m: Message):
                         download_cmd = f"{cmd} -R 25 --fragment-retries 25"
                         os.system(download_cmd)
                         copy = await bot.send_document(chat_id=m.chat.id,document=f'{name}.pdf', caption=cc1)
-                        await copy.copy(chat_id = -1001974000179)
+                        await copy.copy(chat_id =-4040589292)
                         count += 1
                         os.remove(f'{name}.pdf')
                     except FloodWait as e:
@@ -197,7 +197,7 @@ async def account_login(bot: Client, m: Message):
                         time.sleep(e.x)
                         continue
                 else:
-                    prog = await m.reply_text(f"**Downloading:-**\n\n** Video Name :-** `{name}\nQuality - {raw_text2}`\n**link:**`{url}`\n\n **bot made by JAIDEEP**")
+                    prog = await m.reply_text(f"**Downloading:-**\n\n** Video Name :-** `{name}\nQuality - {raw_text2}`\n**link:**`{url}`\n\n **bot made by LPRPDV**")
                     res_file = await helper.download_video(url, cmd, name)
                     filename = res_file
                     await prog.delete(True)
