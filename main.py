@@ -11,7 +11,7 @@ from pyrogram import Client, filters
 from p_bar import progress_bar
 from subprocess import getstatusoutput
 from aiohttp import ClientSession
-import helper
+import module
 from logger import logging
 import time
 import asyncio
